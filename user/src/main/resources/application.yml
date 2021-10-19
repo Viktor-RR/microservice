@@ -1,0 +1,39 @@
+spring:
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+  application:
+    name: user
+  datasource:
+    url: ${JDBC_URL:jdbc:postgresql://localhost:5433/db2?user=app2&password=pass2}
+  jpa:
+    show-sql: true
+server:
+  port: 0
+jwt:
+  private:
+    -----BEGIN PRIVATE KEY-----
+    MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC/GwoRwg02JWyJShAdwAaW6Nm0
+    hh3Iw/RVGVkOX0Mi4+82FGEkzjPwABDsbjtL35IilRZZi83kMcY/nTrmagNCV3zxTjAqkDJgDped
+    n33cKJ/vspzqNwTRNZk8N6JH6RgUN7yn/QyJlS+rdYHFZEChTvaXj5PpGgaCu0PoKxEcKyaGh3Q6
+    3E5nS9XVwu2EW5j3STPKPfzao5nat6Ayw10hdSS1Ctd1HqCS94jS9V4Z/MAAfBCUsfoSe2cGTSmX
+    E7PMoekEieWk5dd2v3d+sKMsKziw85FLekmJ1qGLPA1yZ6wSiamPCLhprt7W+N73zz70Eia6YuIS
+    3UqhzYcP7MMHAgMBAAECggEALu7WDzxoADc6q5Db2mKRe7hd1v7lC6xMMiYSf/wXQddWpSJmJSLb
+    EIMDpP0BZQXYHtQcdAtomjU7Kd5UW8gHWuCfl6eLHrjhFkQfKh/ESjBT7wsfjEnMzhBqvKYxHZX6
+    SuTRWTRFQvi3h1VJdI/Fa5g36UrimWnB1ZNl/vusrQziowy4TWjWjsfbC5wbAFXtLtd4sIpIzI6s
+    2+0Bd4QrG0n91bNMeXyBuSOP/q5cyI/lI7XRN744YU2ehbKqx3G6u3hf+bJkahdo/AmHtzFxgr/u
+    kH2FkcE/AE+jCa7cHTzr78hT8hIFm+3/qRRLkc3s/2VWlQTyZu5dBCydchcoYQKBgQD1dCMIZNa7
+    iD9T7gvO4neEoXyRiJWMnKyZ99moWquRBhN17iAiIzAKb9wGmvVace06oYurH/BA6N42hpOblORx
+    ttRzr3BPJ+pcHNiyY2ThOf8Bgg7HWwEz6fGSfqBtQ3Yl2A7m0u54ftMCLv87Z6C/LxyHvwhzdw6z
+    bM9jVmW0cQKBgQDHURorIVEDqebcm24KL80u3ouCDCsAddVibXA+znGvhHO/3U9K0eBpSgIGnN4Q
+    flRdcDKAP395hB3eQxsQapzH8XTnrSW0w8PPqNEQEu1UvD7ucLm3Mr0NhRFdup3KxuOCPagMUs7o
+    /opOA4tOwNAeX9/Qmfyla87ISHN7HVNK9wKBgQCCqjicF1JYssdDns2abOTDLlRqBRPXrvATZuXv
+    wZTjtyBU/1cL1T+VzsaKnaNPaqanN6hqiK4VX+IrlKivgiu6fWHL0/EtskoIjzKshE0HuSAPZXUI
+    m2GgiUGYguBUSj1zF/mW12MrshgSaYJl1Vy1ahb+DKwrC44/5gThFPU/gQKBgDtc5V1ZI+bicHbd
+    +A0ipYrDD2vhMeGGNtKE47xhAi0TVuIbCOWw0pSpTScpC16AMaJOq0vVHaNUfQzYkbP2/ND0Eix6
+    PlOzRpuPnQybhoIJOvkLK9TrULE5I631yc8+Iz6EHIvnEecFAK4xkgkXliSly2Q2qK+gB0tRgMt3
+    NXqLAoGBAM+F9QHPGC8NjWtfKFAy1SFBJ3wMSuk/dnhlpP1mOngk8wWtb45+2y4wckbhePjszHFl
+    ppMfBfes0+vCzOCzz3dKRMDEkK7sf+GM0sqRhmxbx3T73y17h41fFjXv2SpzHPZFW+eFU4PVUadY
+    yuJcMsl2GswXAu0F3bb5bE4xLSQD
+    -----END PRIVATE KEY-----
+

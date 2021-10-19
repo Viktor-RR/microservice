@@ -1,0 +1,33 @@
+spring:
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      metrics:
+        enabled: true
+  application:
+    name: gateway
+server:
+  port: 9000
+jwt:
+  public:
+    -----BEGIN PUBLIC KEY-----
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvxsKEcINNiVsiUoQHcAGlujZtIYdyMP0
+    VRlZDl9DIuPvNhRhJM4z8AAQ7G47S9+SIpUWWYvN5DHGP5065moDQld88U4wKpAyYA6XnZ993Cif
+    77Kc6jcE0TWZPDeiR+kYFDe8p/0MiZUvq3WBxWRAoU72l4+T6RoGgrtD6CsRHCsmhod0OtxOZ0vV
+    1cLthFuY90kzyj382qOZ2regMsNdIXUktQrXdR6gkveI0vVeGfzAAHwQlLH6EntnBk0plxOzzKHp
+    BInlpOXXdr93frCjLCs4sPORS3pJidahizwNcmesEompjwi4aa7e1vje988+9BImumLiEt1Koc2H
+    D+zDBwIDAQAB
+    -----END PUBLIC KEY-----
+
+management:
+  endpoint:
+    gateway:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: gateway

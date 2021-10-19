@@ -1,0 +1,36 @@
+### Without Gateway
+
+http://localhost:9002/allPayments
+
+### With Gateway
+
+GET http://localhost:9000/aggregator/api/payments
+
+### With Token & Gateway
+
+POST http://localhost:9000/user/register
+Content-Type: application/json
+
+{
+  "username": "Jameson",
+  "password": "Qq_1223"
+}
+###
+
+GET http://localhost:9000/aggregator/api/payments
+Authorization: eyJhbGciOiJSUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwiaWQiOjEsImV4cCI6MTYzMzkzNTA3OSwiaWF0IjoxNjMzODk5MDc5fQ.Nf5T-rY1Qd-WGDMZlEz0nbFkAvbT10W4Ra0x76a1bBhm5sz0BwlSPbosjbtQdaJx-68nZjP7TrRtQWs90YIudE3KRlVDjXvRrCVGqi4hxrcacCupyUeKXUnLFlch9_fVQ82gw9e8quFN7jYSOcJ_sSw51aCmN3-t6zBL3_N2hMPbjNlhEpwOVpxtFDLp4ze_0nqxtgQNlGAMVCNpciiDekqZdcOR78tKr-MV8n0JM_hiXSIOn0XO_K5ZRGfid3BSrSbxcwFai7ZBGIjRVGh4UnfUFaMQxedIHCn5CPIL7kXtvgHLndEBl4IwNsH_CIQlU5KeWhhMd8KNSegKOauSVQ
+
+### to producer Kafka
+
+
+POST http://localhost:9000/producer/api/payments
+Authorization: eyJhbGciOiJSUzI1NiJ9.eyJyb2xlIjoiUk9MRV9VU0VSIiwiaWQiOjEsImV4cCI6MTYzMzkzNTA3OSwiaWF0IjoxNjMzODk5MDc5fQ.Nf5T-rY1Qd-WGDMZlEz0nbFkAvbT10W4Ra0x76a1bBhm5sz0BwlSPbosjbtQdaJx-68nZjP7TrRtQWs90YIudE3KRlVDjXvRrCVGqi4hxrcacCupyUeKXUnLFlch9_fVQ82gw9e8quFN7jYSOcJ_sSw51aCmN3-t6zBL3_N2hMPbjNlhEpwOVpxtFDLp4ze_0nqxtgQNlGAMVCNpciiDekqZdcOR78tKr-MV8n0JM_hiXSIOn0XO_K5ZRGfid3BSrSbxcwFai7ZBGIjRVGh4UnfUFaMQxedIHCn5CPIL7kXtvgHLndEBl4IwNsH_CIQlU5KeWhhMd8KNSegKOauSVQ
+Content-Type: application/json
+
+{
+  "id": 13,
+  "amount": 10000,
+  "comment": "phone payment",
+  "cardNumber": "8320-5445-1033-2550"
+}
+
